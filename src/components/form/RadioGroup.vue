@@ -7,7 +7,7 @@
         type="radio"
         :name="name"
         :id="`${id}-${option.id}`"
-        v-model="selectedRadio"
+        v-model="model"
         @change="$emit('change', $event)"
       />
       <label :for="`${id}-${option.id}`">{{ option.label }}</label>
@@ -30,6 +30,16 @@ export default {
     },
     value: [String, Number],
     id: [String, Number]
+  },
+  computed: {
+    model: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.$emit('input', value)
+      }
+    }
   },
   data () {
     return {

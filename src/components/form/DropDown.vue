@@ -1,11 +1,15 @@
 <template>
   <div class="form-input-area">
     <div v-if="title" class="form-input-title">{{ title }}</div>
-    <select @change="$emit('change', $event)" v-bind="{ name, required, disabled, id }">
+    <select
+      @change="$emit('change', $event)"
+      v-bind="{ name, required, disabled, id }"
+      v-model="model"
+    >
       <option
         v-for="option in options"
         :key="option.id"
-        :value="option.value"
+        :value="option.id"
         >{{ option.value }}</option
       >
     </select>
@@ -27,7 +31,18 @@ export default {
     },
     required: Boolean,
     disabled: Boolean,
-    id: [String, Number]
+    id: [String, Number],
+    value: [String, Number]
+  },
+  computed: {
+    model: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.$emit('input', value)
+      }
+    }
   }
 }
 </script>

@@ -5,9 +5,13 @@
 }
 
 .form-input-title {
-    padding-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .form-radio-input {
     margin-top: 12px;
+}
+
+.required-icon {
+    color: red;
 }

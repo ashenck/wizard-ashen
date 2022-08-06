@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'HomePage',
+  name: 'Page3',
   methods: {
     goBack () {
       this.$router.push('page-2')
