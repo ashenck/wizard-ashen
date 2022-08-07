@@ -7,10 +7,11 @@
         type="radio"
         :name="name"
         :id="`${id}-${option.id}`"
+        :disabled="option.disabled"
         v-model="model"
         @change="$emit('change', $event)"
       />
-      <label :for="`${id}-${option.id}`">{{ option.label }}</label>
+      <label :for="`${id}-${option.id}`" :class="option.disabled && 'text-silver'">{{ option.label }}</label>
     </div>
   </div>
 </template>

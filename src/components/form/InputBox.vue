@@ -4,7 +4,7 @@
     <input
       v-bind="{ name, placeholder, required, disabled, type, min, max, id }"
       v-model="model"
-      @keypress="$emit('keypress', $event)"
+      @keyup="$emit('keyup', $event)"
       @change="$emit('change', $event)"
     />
   </div>
