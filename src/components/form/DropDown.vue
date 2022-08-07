@@ -5,6 +5,7 @@
       @change="$emit('change', $event)"
       v-bind="{ name, required, disabled, id }"
       v-model="model"
+      class="form-select"
     >
       <option
         v-for="option in options"

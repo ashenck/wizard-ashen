@@ -11,7 +11,7 @@
         v-model="model"
         @change="$emit('change', $event)"
       />
-      <label :for="`${id}-${option.id}`" :class="option.disabled && 'text-silver'">{{ option.label }}</label>
+      <label :for="`${id}-${option.id}`" class="text-bold radio-label" :class="option.disabled && 'text-silver'">{{ option.label }}</label>
     </div>
   </div>
 </template>
@@ -49,3 +49,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.radio-label {
+  font-size: 14px;
+}
+</style>
