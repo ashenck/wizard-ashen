@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import InputBox from '@/components/form/InputBox.vue'
 import DropDown from '@/components/form/DropDown.vue'
 import RadioGroup from '@/components/form/RadioGroup.vue'
@@ -88,9 +89,26 @@ export default {
     this.updatePackageRates()
   },
   methods: {
+    ...mapActions(['UPDATE_WIZARD']),
     ProcessData () {
-      this.ageCheck()
-      // this.$router.push('page-3')
+      if (this.age > 100) {
+        this.$router.push('age-error')
+      }
+      if (this.age <= 100) {
+        let wizardData = {
+          name: this.name,
+          age: this.age,
+          selectedCountry: this.selectedCountry,
+          selectedPackage: this.selectedPackage,
+          packageTotal: this.selectedPackageData.packageTotal,
+          selectedCountryName: this.selectedCurrencyData.value,
+          selectedCurrency: this.selectedCurrencyData.currency,
+          selectedPackageName: this.selectedPackageData.value
+        }
+        this.UPDATE_WIZARD(wizardData).then(() => {
+          this.$router.push('page-3')
+        })
+      }
     },
     countryChange () {
       this.updatePackageRates()
