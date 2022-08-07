@@ -160,7 +160,7 @@ export default {
       const currencyData = this.selectedCurrencyData
       this.packageOptions.forEach((packageOption, index) => {
         const premium = this.calculatePremium(currencyData.rate)
-        const premiumExtra = this.calculatePackageExra(
+        const premiumExtra = this.calculatePackageExtra(
           premium,
           packageOption.precentage
         )
@@ -180,7 +180,7 @@ export default {
       }
       return premiumAmount
     },
-    calculatePackageExra (premiumAmount, precent) {
+    calculatePackageExtra (premiumAmount, precent) {
       if (premiumAmount) {
         return premiumAmount * (precent / 100)
       }
