@@ -204,11 +204,6 @@ export default {
       )
       return packageData
     },
-    ageCheck () {
-      if (this.age > 100) {
-        this.$router.push('age-error')
-      }
-    },
     backHome () {
       this.$router.push('/')
     }
