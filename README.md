@@ -1,6 +1,6 @@
 # wizard-ashen
 
-> get price and buy an insurance policy
+> Insurance Policy Application
 
 [Solution Document](https://github.com/ashenck/wizard-ashen/blob/main/Solution.md).
 
