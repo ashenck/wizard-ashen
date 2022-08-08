@@ -58,7 +58,7 @@ It is useful to hold the wizard summery data in store so that the user will not 
 
 ```
 
-## Jest Units
+## Jest Unit Testing
 - Component Render Testing
 - Methods Testing
 
