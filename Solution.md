@@ -58,6 +58,10 @@ It is useful to hold the wizard summery data in store so that the user will not 
 
 ```
 
+## Jest Units
+- Component Render Testing
+- Methods Testing
+
 ## Future Improvements
 - Add Input Box validation messages
 - Prevent user from entering unwanted characters inside the form
