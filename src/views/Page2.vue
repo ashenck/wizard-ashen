@@ -60,9 +60,9 @@
 
 <script>
 import { mapActions } from 'vuex'
-import InputBox from '@/components/form/InputBox.vue'
-import DropDown from '@/components/form/DropDown.vue'
-import RadioGroup from '@/components/form/RadioGroup.vue'
+import InputBox from '@/components/base/InputBox.vue'
+import DropDown from '@/components/base/DropDown.vue'
+import RadioGroup from '@/components/base/RadioGroup.vue'
 
 export default {
   name: 'Page2',
